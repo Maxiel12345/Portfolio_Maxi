@@ -1,3 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #1e1e2f;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
 section {
     opacity: 0;
     transform: translateY(40px);
@@ -7,23 +18,6 @@ section {
 section.mostrar {
     opacity: 1;
     transform: translateY(0);
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    width: 100%;
-    overflow-x: hidden;
-}
-
-body {
-    background: #1e1e2f;
-    margin: 0;
-    width: 100%;
-    overflow-x: hidden;
-    font-family: Arial, sans-serif;
 }
 
 header {
@@ -85,12 +79,10 @@ a {
     color: white;
     border-radius: 20px;
     text-align: center;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
@@ -99,7 +91,6 @@ a {
     display: flex;
     flex-direction: column;
     flex: 1;
-    min-width: 0;
 }
 
 .parrafo {
@@ -114,7 +105,6 @@ a {
 
 #foto {
     width: 300px;
-    max-width: 100%;
     height: auto;
     border-radius: 10px;
     object-fit: cover;
@@ -127,7 +117,6 @@ a {
     padding: 40px;
     color: white;
     border-radius: 20px;
-
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
@@ -136,7 +125,6 @@ a {
     list-style: none;
     padding: 0;
     margin: 0;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -170,12 +158,11 @@ a {
     border: 1px solid rgba(97, 218, 251, 0.3);
     border-radius: 15px;
     overflow: hidden;
-
     display: flex;
     flex-direction: column;
 }
 
-#foto_proyecto {
+.foto_proyecto {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -207,30 +194,22 @@ a {
     display: inline-block;
     background: transparent;
     color: #61dafb;
-
     border: 1px solid #61dafb;
     padding: 10px 20px;
     border-radius: 8px;
-
     text-align: center;
     text-decoration: none;
-
     margin-top: auto;
 }
 
 #contacto {
-    width: auto;
     max-width: 900px;
     margin: 80px auto;
     padding: 40px;
     color: white;
     border-radius: 20px;
-
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-
-    /* Evita que el contenido sobresalga */
-    overflow: hidden;
 }
 
 #contacto .Subtitulo {
@@ -248,22 +227,16 @@ a {
 }
 
 #contacto form {
-    width: 100%;
     max-width: 700px;
     margin: auto;
 }
 
 #contacto fieldset {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-
     background: #292943;
-
     border: 1px solid rgba(97, 218, 251, 0.3);
     border-radius: 15px;
-
     padding: 30px;
+    min-width: 0; /* evita que el min-content del fieldset empuje el ancho */
 }
 
 #contacto legend {
@@ -285,43 +258,25 @@ a {
     font-family: 'Courier New', Courier, monospace;
 }
 
-#contacto input{
-    width: 100%;
-    max-width: 100%;
-
-    background: #1e1e2f;
-    color: white;
-
-    border: 1px solid rgba(97, 218, 251, 0.3);
-    border-radius: 8px;
-
-    padding: 12px;
-    font-size: 16px;
-  
+#contacto input,
 #contacto textarea {
-    width: 100%;
-    max-width: 100%;
-
     background: #1e1e2f;
     color: white;
-
     border: 1px solid rgba(97, 218, 251, 0.3);
     border-radius: 8px;
-
     padding: 12px;
     font-size: 16px;
     outline: none;
+    width: 100%; /* antes no tenían ancho explícito */
 }
 
-#contacto input::placeholder{
-    color: #aaa;
-}
+#contacto input::placeholder,
 #contacto textarea::placeholder {
     color: #aaa;
 }
 
 #contacto input:focus {
-    border-color: #61dafb;
+    color: #aaa;
 }
 
 #contacto textarea:focus {
@@ -334,19 +289,11 @@ a {
 }
 
 button {
-    width: 100%;
-
     background: #4CAF50;
     color: white;
-
     border: none;
-    border-radius: 8px;
-
-    padding: 12px;
-
     cursor: pointer;
     font-weight: bold;
-
     transition: background 0.2s;
 }
 
@@ -360,15 +307,15 @@ button:hover {
         font-size: 55px;
     }
 
-    .descripcion {
-        padding: 0 20px;
-        line-height: 1.5;
-    }
-
     .Navegacion {
         flex-direction: column;
         gap: 10px;
         margin: 30px 20px 0;
+    }
+
+    .Navegacion .elemento {
+        width: 100%;
+        min-width: 0;
     }
 
     #sobre-mi {
@@ -379,10 +326,19 @@ button:hover {
 
     #foto {
         width: 250px;
-        max-width: 100%;
     }
 
     #informacion {
+        margin: 50px 20px;
+        padding: 25px;
+    }
+
+    #proyectos {
+        margin: 50px 20px;
+        padding: 25px;
+    }
+
+    #contacto {
         margin: 50px 20px;
         padding: 25px;
     }
@@ -391,37 +347,7 @@ button:hover {
         grid-template-columns: 1fr;
     }
 
-    #proyectos {
-        margin: 50px 20px;
-        padding: 25px;
-    }
-
     .grid-proyectos {
         grid-template-columns: 1fr;
-    }
-
-    #contacto {
-        margin: 50px 20px;
-        padding: 20px;
-    }
-
-    #contacto fieldset {
-        padding: 20px;
-    }
-
-    #contacto form {
-        width: 100%;
-    }
-
-    #contacto input{
-        width: 100%;
-    }
-    #contacto textarea {
-        width: 100%;
-    }
-
-    #contacto button {
-        width: 100%;
-        margin-top: 15px;
     }
 }
