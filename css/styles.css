@@ -207,109 +207,45 @@ a {
 }
 
 #contacto {
+    width: auto;
     max-width: 900px;
-    margin: 80px auto;
-    padding: 40px;
-    color: white;
-    border-radius: 20px;
-
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-#contacto .Subtitulo {
-    margin-bottom: 15px;
-}
-
-#contacto p {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 35px;
-}
-
-#contacto p a {
-    color: #61dafb;
+    overflow: hidden;
 }
 
 #contacto form {
+    width: 100%;
     max-width: 700px;
-    margin: auto;
 }
 
 #contacto fieldset {
-    background: #292943;
-
-    border: 1px solid rgba(97, 218, 251, 0.3);
-    border-radius: 15px;
-    padding: 30px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
 }
 
-#contacto legend {
-    color: #61dafb;
-    font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    padding: 0 10px;
-}
-
-#contacto form p {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0;
-}
-
-#contacto label {
-    margin-bottom: 8px;
-    font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-#contacto input{
-    background: #1e1e2f;
-    color: white;
-
-    border: 1px solid rgba(97, 218, 251, 0.3);
-    border-radius: 8px;
-
-    padding: 12px;
-    font-size: 16px;
-    outline: none;
-}
-
+#contacto input,
 #contacto textarea {
-    background: #1e1e2f;
-    color: white;
+    width: 100%;
+    max-width: 100%;
+}
 
-    border: 1px solid rgba(97, 218, 251, 0.3);
-    border-radius: 8px;
-
+#contacto button {
+    width: 100%;
+    margin-top: 15px;
     padding: 12px;
-    font-size: 16px;
-    outline: none;
-}
-
-#contacto input::placeholder{
-    color: #aaa;
-}
-
-#contacto textarea::placeholder {
-    color: #aaa;
-}
-
-#contacto input:focus{
-    color: #aaa;
-}
-#contacto textarea:focus {
-    border-color: #61dafb;
-}
-
-#contacto textarea {
-    min-height: 120px;
-    resize: vertical;
+    border-radius: 8px;
 }
 
 
 @media (max-width: 800px) {
+     #contacto {
+        margin: 50px 20px;
+        padding: 20px;
+    }
 
+    #contacto fieldset {
+        padding: 20px;
+    }
     .Nombre {
         font-size: 55px;
     }
