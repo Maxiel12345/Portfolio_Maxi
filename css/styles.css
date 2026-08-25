@@ -237,13 +237,13 @@ a {
     margin-bottom: 15px;
 }
 
-#contacto > p {
+#contacto p {
     text-align: center;
     font-size: 18px;
     margin-bottom: 35px;
 }
 
-#contacto > p a {
+#contacto p a {
     color: #61dafb;
 }
 
