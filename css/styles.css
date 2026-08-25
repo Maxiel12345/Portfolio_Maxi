@@ -13,9 +13,16 @@ section.mostrar {
     box-sizing: border-box;
 }
 
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background: #1e1e2f;
     margin: 0;
+    width: 100%;
+    overflow-x: hidden;
     font-family: Arial, sans-serif;
 }
 
@@ -45,7 +52,7 @@ header {
     border: 1px solid white;
 }
 
-#elemento {
+.elemento {
     background: #292943;
     padding: 8px 15px;
     text-align: center;
@@ -60,7 +67,7 @@ a {
     text-decoration: none;
 }
 
-#elemento:hover {
+.elemento:hover {
     border-color: #61dafb;
 }
 
@@ -78,10 +85,12 @@ a {
     color: white;
     border-radius: 20px;
     text-align: center;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
+
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
@@ -90,6 +99,7 @@ a {
     display: flex;
     flex-direction: column;
     flex: 1;
+    min-width: 0;
 }
 
 .parrafo {
@@ -104,6 +114,7 @@ a {
 
 #foto {
     width: 300px;
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
     object-fit: cover;
@@ -131,7 +142,7 @@ a {
     gap: 20px;
 }
 
-#habilidad {
+.habilidad {
     background: #292943;
     padding: 20px;
     text-align: center;
@@ -159,6 +170,7 @@ a {
     border: 1px solid rgba(97, 218, 251, 0.3);
     border-radius: 15px;
     overflow: hidden;
+
     display: flex;
     flex-direction: column;
 }
@@ -209,45 +221,148 @@ a {
 #contacto {
     width: auto;
     max-width: 900px;
+    margin: 80px auto;
+    padding: 40px;
+    color: white;
+    border-radius: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    /* Evita que el contenido sobresalga */
     overflow: hidden;
+}
+
+#contacto .Subtitulo {
+    margin-bottom: 15px;
+}
+
+#contacto > p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+#contacto > p a {
+    color: #61dafb;
 }
 
 #contacto form {
     width: 100%;
     max-width: 700px;
+    margin: auto;
 }
 
 #contacto fieldset {
     width: 100%;
     max-width: 100%;
     min-width: 0;
+
+    background: #292943;
+
+    border: 1px solid rgba(97, 218, 251, 0.3);
+    border-radius: 15px;
+
+    padding: 30px;
 }
 
-#contacto input,
+#contacto legend {
+    color: #61dafb;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0 10px;
+}
+
+#contacto form p {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+#contacto label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#contacto input{
+    width: 100%;
+    max-width: 100%;
+
+    background: #1e1e2f;
+    color: white;
+
+    border: 1px solid rgba(97, 218, 251, 0.3);
+    border-radius: 8px;
+
+    padding: 12px;
+    font-size: 16px;
+  
 #contacto textarea {
     width: 100%;
     max-width: 100%;
-}
 
-#contacto button {
-    width: 100%;
-    margin-top: 15px;
-    padding: 12px;
+    background: #1e1e2f;
+    color: white;
+
+    border: 1px solid rgba(97, 218, 251, 0.3);
     border-radius: 8px;
+
+    padding: 12px;
+    font-size: 16px;
+    outline: none;
 }
 
+#contacto input::placeholder{
+    color: #aaa;
+}
+#contacto textarea::placeholder {
+    color: #aaa;
+}
+
+#contacto input:focus {
+    border-color: #61dafb;
+}
+
+#contacto textarea:focus {
+    border-color: #61dafb;
+}
+
+#contacto textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+
+    background: #4CAF50;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 12px;
+
+    cursor: pointer;
+    font-weight: bold;
+
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #45a049;
+}
 
 @media (max-width: 800px) {
-     #contacto {
-        margin: 50px 20px;
-        padding: 20px;
-    }
 
-    #contacto fieldset {
-        padding: 20px;
-    }
     .Nombre {
         font-size: 55px;
+    }
+
+    .descripcion {
+        padding: 0 20px;
+        line-height: 1.5;
     }
 
     .Navegacion {
@@ -264,19 +379,10 @@ a {
 
     #foto {
         width: 250px;
+        max-width: 100%;
     }
 
-    #informacion{
-        margin: 50px 20px;
-        padding: 25px;
-    }
-
-    #proyectos{
-        margin: 50px 20px;
-        padding: 25px;
-    }
-
-    #contacto {
+    #informacion {
         margin: 50px 20px;
         padding: 25px;
     }
@@ -285,19 +391,37 @@ a {
         grid-template-columns: 1fr;
     }
 
+    #proyectos {
+        margin: 50px 20px;
+        padding: 25px;
+    }
+
     .grid-proyectos {
         grid-template-columns: 1fr;
     }
-}
 
-button { 
-  background: #4CAF50; 
-  color: white; 
-  border: none; 
-  cursor: pointer; 
-  font-weight: bold; 
-  transition: background 0.2s; 
-}
-button:hover { 
-  background: #45a049; 
+    #contacto {
+        margin: 50px 20px;
+        padding: 20px;
+    }
+
+    #contacto fieldset {
+        padding: 20px;
+    }
+
+    #contacto form {
+        width: 100%;
+    }
+
+    #contacto input{
+        width: 100%;
+    }
+    #contacto textarea {
+        width: 100%;
+    }
+
+    #contacto button {
+        width: 100%;
+        margin-top: 15px;
+    }
 }
