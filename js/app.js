@@ -12,6 +12,22 @@ secciones.forEach((seccion) => {
   observer.observe(seccion);
 });
 
+
+//rastreo el boton del menu y el nav
+const btnMenu = document.getElementById("btn-menu");
+const nav = document.querySelector(".Navegacion");
+
+//le agrego la clase nav abierto y si hay otro click, se lo quito
+btnMenu.addEventListener("click", () => {
+  nav.classList.toggle("nav-abierto");
+});
+
+// cerrar al hacer click en un link (mejora UX en mobile)
+links.forEach((link) => {
+  link.addEventListener("click", () => nav.classList.remove("nav-abierto"));
+});
+
+
 //envio de mensajes a mi email
 emailjs.init("e9VFOZ871p2nhLFVC");
 
