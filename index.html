@@ -12,6 +12,7 @@
     </header>
 
     <nav>
+        <button id="btn-menu" aria-label="Abrir menú">☰</button>
         <ul class="Navegacion">
             <li class="elemento"><a href="#sobre-mi">Sobre mi</a></li>
             <li class="elemento"><a href="#informacion">Habilidades</a></li>
@@ -25,7 +26,7 @@
         <section id="sobre-mi">
             <div class="texto">
                 <h2 class="Subtitulo">Sobre mi</h2>
-                <p class="Parrafo">Hola, mi nombre es Maximiliano Ruiz y soy un estudiante de la UNSa cursando la carrera de Tecnicatura Universitaria en Programacion. <br> Estoy en mi 2do año y este es mi primer portfolio hecho con <strong>HTML, CSS y JavaScript</strong></p>
+                <p class="Parrafo">Hola, mi nombre es Maximiliano Ruiz y soy un estudiante de la UNSa cursando la carrera de Tecnicatura Universitaria en Programacion. Estoy en mi 2do año y este es mi primer portfolio hecho con <strong>HTML, CSS y JavaScript</strong></p>
             </div>
 
             <img id="foto" src="./img/fotooo.jpg" alt="foto" width="300">
@@ -52,8 +53,8 @@
                     <img class="foto_proyecto" src="./img/condicionalidad.jpeg" alt="Proyecto 1">
                     <div class="card-body">
 
-                        <h3>Sistema de Condicionalidad</h3>
-                        <p>
+                        <h3 class="titulo_tarjeta">Sistema de Condicionalidad</h3>
+                        <p class="descripcion_tarjeta">
                             Desarrollo de una aplicacion de escritorio para la gestion de la cursada condicionada para alumnos de Ciencias Exactas
                         </p>
 
@@ -64,8 +65,8 @@
                     <img class="foto_proyecto" src="./img/proyecto2.png" alt="Proyecto 2">
 
                     <div class="card-body">
-                        <h3>CRUD de biblioteca</h3>
-                        <p>
+                        <h3 class="titulo_tarjeta">CRUD de biblioteca</h3>
+                        <p class="descripcion_tarjeta">
                             Aplicacion web para la carga, eliminacion, actualizacion y muestra de libros
                         </p>
                     </div>
@@ -77,12 +78,12 @@
 
         <section id="contacto">
             <h2 class="Subtitulo">Contacto</h2>
-            <p>Escribime a <a href="mailto:maxi1204maxu@gmail.com">maxi1204maxu@gmail.com</a> o dejame un mensaje aca abajo</p>
+            <p>Por cualquier consulta, dejame tu mensaje aca abajo</p>
             <form id="form">
                 <fieldset>
                     <legend>Tus datos</legend>
 
-                    <p>
+                    <p class="seccion_form">
                         <label for="NombreyApellido">Nombre y apellido</label>
                         <input
                             name="nombre"
@@ -93,7 +94,7 @@
                         >
                     </p>
 
-                    <p>
+                    <p class="seccion_form">
                         <label for="email">Correo electrónico</label>
                         <input
                             name="email"
@@ -104,7 +105,7 @@
                         >
                     </p>
 
-                    <p>
+                    <p class="seccion_form">
                         <label for="mensaje">Mensaje</label>
                         <textarea
                             name="mensaje"
