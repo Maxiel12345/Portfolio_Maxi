@@ -22,11 +22,6 @@ btnMenu.addEventListener("click", () => {
   nav.classList.toggle("nav-abierto");
 });
 
-// cerrar al hacer click en un link (mejora UX en mobile)
-links.forEach((link) => {
-  link.addEventListener("click", () => nav.classList.remove("nav-abierto"));
-});
-
 
 //envio de mensajes a mi email
 emailjs.init("e9VFOZ871p2nhLFVC");
