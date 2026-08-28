@@ -124,6 +124,7 @@ strong {
     gap: 20px;/*20px de separacion*/
 }
 .habilidad {
+cursor:pointer
     background: #292943;
     padding: 20px;
     text-align: center;
@@ -134,6 +135,27 @@ strong {
 }
 
 
+.habilidad-detalle {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.habilidad-detalle li {
+  padding: 6px 0;
+  font-size: 14px;
+  color: #ccc;
+  border-top: 1px solid rgba(97, 218, 251, 0.15);
+}
+
+.habilidad.abierto .habilidad-detalle {
+  max-height: 300px;
+  margin-top: 12px;
+}
 #proyectos {
     max-width: 1000px;
     margin: 80px auto;
