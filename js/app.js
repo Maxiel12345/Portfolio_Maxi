@@ -1,3 +1,15 @@
+// acordeón de habilidades (una abierta a la vez)
+const habilidades = document.querySelectorAll(".habilidad");
+
+habilidades.forEach((hab) => {
+  hab.addEventListener("click", () => {
+    const yaEstabaAbierta = hab.classList.contains("abierto");
+    habilidades.forEach((h) => h.classList.remove("abierto"));
+    if (!yaEstabaAbierta) hab.classList.add("abierto");
+  });
+});
+
+
 //animacion para la aparicion de secciones
 const secciones = document.querySelectorAll("section");
 const observer = new IntersectionObserver((entradas) => {
