@@ -1,4 +1,4 @@
-// acordeón de habilidades (una abierta a la vez)
+// muestra de habilidades
 const habilidades = document.querySelectorAll(".habilidad");
 
 habilidades.forEach((hab) => {
